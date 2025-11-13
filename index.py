@@ -50,10 +50,10 @@ def get_expected_output(slayerLevel, hp, breathingMastery, hasTalisman, timeOfDa
     if finalHP <= 0:
         scene4_res = "Boss defeated! (finalHP = 0)"
     elif specialMoveReady == 1 and finalHP <= 50:
-        scene4_res = "Use special move to finish!"
+        scene4_res = f"Use special move to finish! (finalHP = {finalHP})"
     else:
-        scene4_res = "Withdraw to heal."
-        
+        scene4_res = f"Withdraw to heal. (finalHP = {finalHP})"
+
     result.append(f"[Scene 4] {scene4_res}")
 
     return "\n".join(result)
